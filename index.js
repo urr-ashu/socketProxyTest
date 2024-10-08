@@ -35,6 +35,7 @@ const server = http.createServer(app);
 
 configureSocketIo(server);
 
-server.listen(5050, () => {
-  console.log("listening on port 5050");
+const PORT = process.env.PORT || 5050;
+server.listen(PORT, () => {
+  console.log("listening on port " + PORT);
 });
